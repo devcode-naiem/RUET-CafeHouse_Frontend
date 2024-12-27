@@ -1,4 +1,4 @@
-import OrderDetailsPage from './OrderDetailsPage';
+import OrderDetailsPage from '../../../components/order/OrderDetailsPage';
 
 export default async function Page(props: { params: { orderId: string } }) {
   // Wrap params in a Promise to satisfy the expected type

@@ -24,10 +24,16 @@ const getStatusColor = (status: string) => {
   };
   return colors[status as keyof typeof colors] || colors.pending;
 };
+type Props = {
+  orderId: string;
+};
 
+ 
 export default function AdminOrderDetailsPage({ orderId }: { orderId: string }) {
-  const router = useRouter();
   const { orderDetails, isLoading, error } = useOrderDetails(orderId);
+  const router = useRouter();
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error loading details...</div>;
 
   if (isLoading) {
     return (

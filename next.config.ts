@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
     remotePatterns: [
       {
@@ -14,4 +15,8 @@ module.exports = {
   publicRuntimeConfig: {
     staticFolder: '/public',
   },
-};
+}
+
+module.exports = nextConfig
+
+// local machine git folders

@@ -11,7 +11,7 @@ import {
 import { useRouter } from 'next/navigation';
 
 export default function OrderDetailsPage({ params }: { params: Promise<{ orderId: string }> }) {
-  const resolvedParams = use(params); // Resolve the Promise
+  const resolvedParams = use(params); 
   const router = useRouter();
   const { orderId } = resolvedParams;
 
