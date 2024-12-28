@@ -74,7 +74,7 @@ export default function AdminOrderDetailsPage({ orderId }: { orderId: string }) 
 
         <div className="flex justify-between items-center">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900">Order #{order.id}</h1>
+            <h1 className="text-3xl font-bold text-white">Order #{order.id}</h1>
             <p className="text-gray-600">Placed on {format(new Date(order.created_at), 'PPp')}</p>
           </div>
           <span
@@ -87,7 +87,7 @@ export default function AdminOrderDetailsPage({ orderId }: { orderId: string }) 
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
-          <div className="bg-white rounded-lg shadow-md p-6">
+          <div className="bg-white text-black rounded-lg shadow-md p-6">
             <h2 className="text-xl font-semibold">Order Items</h2>
             {order.items.map((item) => (
               <div key={item.id} className="flex justify-between py-3 border-b last:border-none">
@@ -105,7 +105,7 @@ export default function AdminOrderDetailsPage({ orderId }: { orderId: string }) 
           </div>
         </div>
 
-        <div>
+        <div className='text-black'>
           <div className="bg-white rounded-lg shadow-md p-6">
             <h2 className="text-xl font-semibold">Customer Information</h2>
             <p>{order.user_name}</p>

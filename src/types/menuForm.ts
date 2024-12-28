@@ -21,6 +21,7 @@ export interface MenuItemForm {
   type: MenuItemType;
   price: string;
   description: string;
+  image_url: string;
 }
 
 export interface AddMenuResponse {

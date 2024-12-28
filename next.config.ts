@@ -4,12 +4,12 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'unsplash.com',
+        hostname: 'images.unsplash.com',
         port: '',
         pathname: '/photos/**',
       },
     ],
-    domains: ['unsplash.com'], // Allow images from unsplash.com
+    domains: ['unsplash.com','images.unsplash.com' ], // Allow images from unsplash.com
   },
   // Enable serving images from the public folder
   publicRuntimeConfig: {
